@@ -7,30 +7,34 @@ import java.util.List;
 public class MissingElementInAnArray {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
 		int[] arr = {1,2,3,4,7,6,8};
+		//sorting an array
 		Arrays.sort(arr);
-		
-		
+		//List creation		
 		List<Integer> list1=new ArrayList<Integer>();
+		//iterate over the array and adding the element to the list
 		for (int i = 0; i < arr.length; i++) {
 			
 			list1.add(new Integer(arr[i]));
 			//System.out.println(list1);
 			}
-		 for (int j = 0; j < list1.size(); j++) {
-			   for (int k =j+1; k < list1.size(); k++) {
-				   //System.out.println("list plus 1 "+list1.get(j+1));
-				   //System.out.println("list 1 get i "+list1.get(k));
-				   if(list1.get(j+1)!=(list1.get(k+1)))
+		//printing size of array
+		System.out.println(list1.size());
+		for (int j = 1; j < list1.size()+2; j++) {
+			 
+				//conditional statement to check the missing element of array 				   
+				   if(!list1.contains(j))
 				   {
-					   System.out.println(list1.get(k)+1);
+					   //printing the missing element
+					   System.out.println("missing element in an Array is "+j);
 					   break;
 				   }
-			   
+				 
 	       }
-		 }
+		 
 	}
 }
+
+		 
+
 		 
